@@ -1,23 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap");
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-img{
+img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-html{
+html {
     font-family: 'Nunito';
     font-size: 12px;
+    font-weight: 600;
 }
 
-section{
+section {
     min-height: 100vh;
     width: 100%;
     display: flex;
@@ -27,21 +28,21 @@ section{
     background-color: rgb(26, 26, 27);
 }
 
-.container{
-    width: 90%;
-    height: auto;
+.container {
+    width: 100%;
     max-width: 1200px;
-    margin: 0 auto;   
+    margin: 0 auto;
+    padding: 20px;
 }
 
-.brand{
+.brand {
     text-align: center;
     font-size: 4rem;
     color: whitesmoke;
     margin-bottom: 30px;
 }
 
-form{
+form {
     width: 90%;
     max-width: 400px;
     margin: 20px auto;
@@ -49,7 +50,7 @@ form{
     border-radius: 4px;
 }
 
-form input{
+form input {
     width: 90%;
     background-color: transparent;
     padding: 10px;
@@ -59,14 +60,15 @@ form input{
     display: inline-block;
 }
 
-form ion-icon{
+form ion-icon {
     width: 9%;
-    font-size: 3em;
-    margin: -9px;
+    font-size: 3rem;
+    margin-bottom: -9px;
     color: rgb(75, 75, 75);
+    display: inline-block;
 }
 
-.search-result{
+.search-result {
     margin-top: 50px;
     width: 100%;
     display: grid;
@@ -74,7 +76,7 @@ form ion-icon{
     grid-template: auto / repeat(auto-fit, minmax(300px, 1fr));
 }
 
-.item{
+.item {
     width: 100%;
     border-radius: 8px;
     background-color: rgb(37, 37, 37);
@@ -82,20 +84,66 @@ form ion-icon{
     overflow: hidden;
 }
 
-.item img{
+.item img {
     width: 100%;
     height: 300px;
     border-radius: 4px;
 }
 
-.item flex-container{
+.flex-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
+.item .title {
+    color: whitesmoke;
+    margin: 20px 10px 0 0;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
 
+.item .view-btn {
+    color: whitesmoke;
+    text-decoration: none;
+    background-color: rgb(75, 75, 75);
+    padding: 5px 10px;
+    border-radius: 4px;
+}
 
+.item .item-data {
+    color: whitesmoke;
+    margin-top: 10px;
+}
+
+.container.initial .brand{
+    font-size: 7rem;
+}
+
+.container.initial form{
+    max-width: 800px;
+}
+
+.container.initial form input{
+    padding: 20px;
+    font-size: 3rem;
+}
+
+@media (max-width: 769px) {
+    .search-result{
+        grid-gap: 10px;
+    }
+    .container.initial .brand{
+        font-size:4rem;
+    }
+    .container.initial form {
+        max-width: 500px;
+    }
+    .container.initial form input{
+        padding: 10px;
+        font-size: 3rem;
+    }
+}
 
 
 
